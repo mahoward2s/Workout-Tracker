@@ -1,55 +1,48 @@
-/* db.User.create({ name: "Ernest Hemingway" })
-  .then(dbUser => {
-    console.log(dbUser);
-  })
-  .catch(({ message }) => {
-    console.log(message);
-  });
+const Workout = require("../models/workout")
 
-app.get("/notes", (req, res) => {
-  db.Note.find({})
-    .then(dbNote => {
-      res.json(dbNote);
-    })
-    .catch(err => {
-      res.json(err);
+module.exports = function(app){
+    app.get("/api/workouts", function(req, res){
+        Workout.find().then(data => {
+            res.json(data)
+        })
+        .catch(err => {
+            res.json(errq)
+        })
     });
-});
 
-app.get("/user", (req, res) => {
-  db.User.find({})
-    .then(dbUser => {
-      res.json(dbUser);
-    })
-    .catch(err => {
-      res.json(err);
+    app.post("/api/workouts", function(req, res){
+        Workout.create().then(data => {
+            res.json(data)
+        })
+        .catch(err => {
+            res.json(err);
+        })
     });
-});
 
-app.post("/submit", ({ body }, res) => {
-  db.Note.create(body)
-    .then(({ _id }) => db.User.findOneAndUpdate({}, { $push: { notes: _id } }, { new: true }))
-    .then(dbUser => {
-      res.json(dbUser);
-    })
-    .catch(err => {
-      res.json(err);
+    app.get("/api/workouts", function(req, res){
+        Workout.find().then(data => {
+            res.json(data)
+        })
+        .catch(err => {
+            res.json(errq)
+        })
     });
-});
 
-app.get("/populateduser", (req, res) => {
-  // TODO
-  // =====
-  // Write the query to grab the documents from the User collection,
-  // and populate them with any associated Notes.
-  // TIP: Check the models out to see how the Notes refers to the User
+    app.post("/api/workouts", function(req, res){
+        Workout.create().then(data => {
+            res.json(data)
+        })
+        .catch(err => {
+            res.json(err);
+        })
+    });
 
-db.User.find({})
-.populate("notes")
-.then(userWithNotes => {
-  res.json(usersWithNotes)
-})
-.catch (err => {
-  res.json(err)
-})
-}); */
+    app.put("/api/workouts", function(req, res){
+        Workout.create().then(data => {
+            res.json(data)
+        })
+        .catch(err => {
+            res.json(err);
+        })
+    });
+}
