@@ -14,6 +14,3 @@ router.get("/stats", (req, res) => {
 })
 
 module.exports=router
-
-
-// need route for exercise, index, and stats

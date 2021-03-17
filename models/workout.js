@@ -6,11 +6,15 @@ const WorkoutSchema = new Schema(
             {
                 name: String,
 
+                distance: Number,
+
+                duration: Number,
+
                 weight: Number,
 
-                reps: Number,
+                sets: Number,
 
-                duration: Number
+                reps: Number,
             }
         ]
     }
