@@ -21,6 +21,7 @@
 
 ## Installation
 - Link to Repo:
+https://github.com/mahoward2s/Workout-Tracker
 
 
 - Link to Launched App:
