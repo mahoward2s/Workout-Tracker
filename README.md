@@ -29,7 +29,7 @@ https://obscure-forest-71087.herokuapp.com/
 
 
 ## Usage 
-N/A
+- node server.js to run locally.
 
 ## License: 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
